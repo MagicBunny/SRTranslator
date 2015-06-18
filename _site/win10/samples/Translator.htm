@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html>
+  ﻿<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> - Sample Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+
+    <link id="linkBaseUrl" href="" />
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"/><![endif]-->
+
+    <link rel="canonical" href="/win10/samples/Translator.htm">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/pygments.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/nav.css" rel="stylesheet" />
+
+    
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
+        }({
+            instrumentationKey: "e38fbe82-9f06-4e70-a70e-86e018b1cbdf"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
+
+</head>
+
+<body class="default-body">
+    <div class="chrome-header-wrapper">
+        ﻿<link href="https://assets.onestore.ms/cdnfiles/onestorerolling-1504-27002/shell/v1/scss/shell.min.css" rel="stylesheet" type="text/css" />
+
+<div id="shell-header" class="shell-rwd shell-bottomborder shell-header ">
+    <div class="shell-header-wrapper">
+        <div class="shell-header-top" data-bi-area="HeaderL0" data-bi-view="L0V1">
+
+            <div class="shell-header-brand">
+                <a id="srv_shellHeaderMicrosoftLogo" href="http://www.microsoft.com/en-us/default.aspx"
+                   title="Microsoft" data-bi-name="BrandLogo">
+                    <img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1504-27002/shell/v1/images/logo/microsoft.png" alt="Microsoft" />
+                </a>
+            </div>
+            <h2 class="shell-header-subtitle">
+                <span class="shell-header-vertical-bar"></span>
+                <a href="https://devx.windows.com/en-us/home" data-bi-name="Segment Title">Windows Dev Center</a>
+            </h2>
+            <ul class="shell-header-toggle">
+                <li>
+                    <button class="shell-header-toggle-search" type="button" data-bi-name="Toggle Search Icon">
+                        <i class="shell-icon-search"></i>
+                    </button>
+                </li>
+                <li>
+                    <button class="shell-header-toggle-menu" type="button" data-bi-name="Toggle Menu">
+                        <i class="shell-icon-menu"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="shell-header-actions">
+                <form id="srv_shellHeaderSearchForm" class="shell-header-search" action="http://social.msdn.microsoft.com/search/en-us/windows" method="GET" autocomplete="off" onsubmit="return window.msCommonShell.onSearch(this)">
+                    <label for="cli_shellHeaderSearchInput" class="sr-only">Search Microsoft</label>
+                    <input id="cli_shellHeaderSearchInput" type="search" name="query" data-bi-dnt="" placeholder="" maxlength="200" />
+
+                    <input type="hidden" name="Refinement" data-bi-dnt="" value="183" />
+
+                    <button type="submit" title="Search" data-bi-dnt="">
+                        <i class="shell-icon-search"></i>
+                        <span class="sr-only">Search</span>
+                    </button>
+                    <div id="cli_searchSuggestionsContainer" class="shell-header-search-dropdown-container">
+                        <div class="search-dropdown">
+                            <div class="dropdown-item">
+                                <ul id="cli_searchSuggestionsResults"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <dl class="shell-header-user">
+                    <dt>
+                        <span id="meControl"></span>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+
+        <ul class="shell-header-nav" id="srv_shellHeaderNav" data-bi-area="L1" data-bi-view="Hovermenus">
+            <li id="home" class="shell-header-dropdown-label ">
+                <a class="top-level-link-text ctl_headerNavLink" href="https://devx.windows.com/en-us/home" role="menuitem" data-bi-name="Home" data-bi-slot="1">
+
+                    Home
+                </a>
+            </li>
+            <li class="shell-header-dropdown " data-navcontainer="explore_NavContainer">
+                <h2 id="explore" class="shell-header-dropdown-label">
+                    <a href="javascript:void(0)" role="menu" data-bi-name="Explore" data-bi-slot="2">
+
+                        Explore
+                        <i class="shell-icon-dropdown"></i>
+                    </a>
+                </h2>
+
+
+
+
+
+                <div class="shell-header-dropdown-content ">
+                    <dl class="shell-header-dropdown-tab active ">
+
+                        <dt id="explore_apps" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                App development
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="0">
+
+
+
+
+
+                            <a href="https://devx.windows.com/en-us/windows-apps" class="shell-header-dropdown-tab-spotlight" data-bi-name="Explore_Apps_TabImage">
+                                <img data-src="https://compass-ssl.microsoft.com/assets/10/97/10973225-8654-43bf-8730-f534dc369178.jpg?n=explore-apps.jpg" alt="" />
+                                <div class="shell-header-dropdown-tab-spotlight-caption">
+                                    <h4>Universal Windows app development</h4>
+
+                                    <p>Be more than mobile, reach every Windows screen</p>
+
+                                </div>
+
+                            </a>
+
+
+
+                        </dd>
+
+                    </dl>
+                    <dl class="shell-header-dropdown-tab ">
+
+                        <dt id="explore_games" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Game development
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="0">
+
+
+
+
+
+                            <a href="https://devx.windows.com/en-us/games" class="shell-header-dropdown-tab-spotlight" data-bi-name="Explore_Games_TabImage">
+                                <img data-src="https://compass-ssl.microsoft.com/assets/ca/80/ca809819-432a-4778-a713-0e9e94ba1481.jpg?n=explore-games.jpg" alt="" />
+                                <div class="shell-header-dropdown-tab-spotlight-caption">
+                                    <h4>Create games on Windows 10</h4>
+
+                                    <p>Reach millions of players across phone, PC, and Xbox One</p>
+
+                                </div>
+
+                            </a>
+
+
+
+                        </dd>
+
+                    </dl>
+                    <dl class="shell-header-dropdown-tab ">
+
+                        <dt id="explore_iot" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Windows IoT
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="0">
+
+
+
+
+
+                            <a href="https://devx.windows.com/en-us/iot" class="shell-header-dropdown-tab-spotlight" data-bi-name="Explore_IoT_TabImage">
+                                <img data-src="https://compass-ssl.microsoft.com/assets/14/0c/140c526f-ad9d-4372-9c00-7b6cd39993f5.jpg?n=explore-iot.jpg" alt="" />
+                                <div class="shell-header-dropdown-tab-spotlight-caption">
+                                    <h4>Build what matters most to you</h4>
+
+                                    <p>The Internet of your things</p>
+
+                                </div>
+
+                            </a>
+
+
+
+                        </dd>
+
+                    </dl>
+                    <dl class="shell-header-dropdown-tab ">
+
+                        <dt id="explore_spartan" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Web development
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="0">
+
+
+
+
+
+                            <a href="https://devx.windows.com/en-us/project-spartan-for-devs" class="shell-header-dropdown-tab-spotlight" data-bi-name="Explore_Spartan_TabImage">
+                                <img data-src="https://compass-ssl.microsoft.com/assets/a6/07/a607c651-4076-420b-9a4d-a76621839ace.jpg?n=explore-spartan.jpg" alt="" />
+                                <div class="shell-header-dropdown-tab-spotlight-caption">
+                                    <h4>Web development for Project Spartan</h4>
+
+                                    <p>Beyond browsing</p>
+
+                                </div>
+
+                            </a>
+
+
+
+                        </dd>
+
+                    </dl>
+
+                </div>
+
+            </li>
+            <li class="shell-header-dropdown " data-navcontainer="docs_NavContainer">
+                <h2 id="docs" class="shell-header-dropdown-label">
+                    <a href="javascript:void(0)" role="menu" data-bi-name="Docs" data-bi-slot="3">
+
+                        Docs
+                        <i class="shell-icon-dropdown"></i>
+                    </a>
+                </h2>
+
+
+
+
+
+                <div class="shell-header-dropdown-content ">
+                    <dl class="shell-header-dropdown-tab shell-tab-mcol active ">
+
+                        <dt id="docs_apps" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Windows apps
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="4">
+
+
+
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Get started</h3></li>
+                                <li id="docs_apps_whatsuniversal">
+                                    <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn726767.aspx" role="menuitem" data-bi-name="Docs_Apps_WhatsUniversal">
+                                        What&#39;s a Universal Windows app?
+                                    </a>
+                                </li>
+                                <li id="docs_apps_setup">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/dn726766.aspx" role="menuitem" data-bi-name="Docs_Apps_Setup">
+                                        Get set up
+                                    </a>
+                                </li>
+                                <li id="docs_apps_signup">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124287.aspx" role="menuitem" data-bi-name="Docs_Apps_SignUp">
+                                        Sign up
+                                    </a>
+                                </li>
+                                <li id="docs_apps_first">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124288.aspx" role="menuitem" data-bi-name="Docs_Apps_First">
+                                        Your first app
+                                    </a>
+                                </li>
+                                <li id="docs_apps_new">
+                                    <a href="https://devx.windows.com/en-US/getstarted/whats-new-windows-10" role="menuitem" data-bi-name="Docs_Apps_New">
+                                        New for Windows 10
+                                    </a>
+                                </li>
+                                <li id="docs_apps_all" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/getstarted" role="menuitem" data-bi-name="Docs_Apps_All">
+                                        All Get started &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Design</h3></li>
+                                <li id="docs_apps_basics">
+                                    <a href="https://devx.windows.com/en-us/design/design-basics" role="menuitem" data-bi-name="Docs_Apps_Basics">
+                                        Basics
+                                    </a>
+                                </li>
+                                <li id="docs_apps_guidelines">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/hh465424.aspx" role="menuitem" data-bi-name="Docs_Apps_Guidelines">
+                                        Guidelines
+                                    </a>
+                                </li>
+                                <li id="docs_apps_downloads">
+                                    <a href="https://devx.windows.com/en-us/design/assets" role="menuitem" data-bi-name="Docs_Apps_Downloads">
+                                        Downloads
+                                    </a>
+                                </li>
+                                <li id="docs_apps_alldesign" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/design" role="menuitem" data-bi-name="Docs_Apps_Alldesign">
+                                        All Design &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Develop</h3></li>
+                                <li id="docs_apps_platformguides">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/br211361.aspx" role="menuitem" data-bi-name="Docs_Apps_Platformguides">
+                                        Platform overviews
+                                    </a>
+                                </li>
+                                <li id="docs_apps_howguides">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn726537.aspx" role="menuitem" data-bi-name="Docs_Apps_Howguides">
+                                        How-to guides
+                                    </a>
+                                </li>
+                                <li id="docs_apps_apireference">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx" role="menuitem" data-bi-name="Docs_Apps_Apireference">
+                                        API reference
+                                    </a>
+                                </li>
+                                <li id="docs_apps_services">
+                                    <a href="https://devx.windows.com/en-us/develop/microsoft-services" role="menuitem" data-bi-name="Docs_Apps_Services">
+                                        Services
+                                    </a>
+                                </li>
+                                <li id="docs_apps_alldevelop" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Apps_Alldevelop">
+                                        All Develop &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Publish</h3></li>
+                                <li id="docs_apps_win8">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/dn745656.aspx" role="menuitem" data-bi-name="Docs_Apps_Win8">
+                                        Publish Windows 8 apps
+                                    </a>
+                                </li>
+                                <li id="docs_apps_winphone">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/jj206736.aspx" role="menuitem" data-bi-name="Docs_Apps_Winphone">
+                                        Publish Windows Phone apps
+                                    </a>
+                                </li>
+                                <li id="docs_apps_previewdash">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/dn986134.aspx" role="menuitem" data-bi-name="Docs_Apps_Previewdash">
+                                        Preview the new dashboard
+                                    </a>
+                                </li>
+                                <li id="docs_apps_storepolicies">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/dn764939.aspx" role="menuitem" data-bi-name="Docs_Apps_Storepolicies">
+                                        Store Policies
+                                    </a>
+                                </li>
+                                <li id="docs_apps_allpublish" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/publish" role="menuitem" data-bi-name="Docs_Apps_Allpublish">
+                                        All Publish &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </dd>
+
+                    </dl>
+                    <dl class="shell-header-dropdown-tab shell-tab-mcol ">
+
+                        <dt id="docs_games" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Games
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="4">
+
+
+
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Get started</h3></li>
+                                <li id="docs_games_windowsinsider">
+                                    <a href="https://insider.windows.com" role="menuitem" data-bi-name="Docs_Games_WindowsInsider">
+                                        Windows Insider
+                                    </a>
+                                </li>
+                                <li id="docs_games_windowsuniversalappplatform">
+                                    <a href="https://devx.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Games_WindowsUniversalAppPlatform">
+                                        Universal Windows Platform (UWP)
+                                    </a>
+                                </li>
+                                <li id="docs_games_choosetechnology">
+                                    <a href="https://devx.windows.com/en-us/games/technology" role="menuitem" data-bi-name="Docs_Games_ChooseTechnology">
+                                        Choose a technology
+                                    </a>
+                                </li>
+                                <li id="docs_games_signup">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/bg124287.aspx" role="menuitem" data-bi-name="Docs_Games_SignUp">
+                                        Sign up
+                                    </a>
+                                </li>
+                                <li id="docs_games_all" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/games/getstarted" role="menuitem" data-bi-name="Docs_Games_All">
+                                        All Get started &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Design</h3></li>
+                                <li id="docs_games_microsoftdesignprinciples">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/hh781237.aspx" role="menuitem" data-bi-name="Docs_Games_MicrosoftDesignPrinciples">
+                                        Microsoft design principles
+                                    </a>
+                                </li>
+                                <li id="docs_games_appdesignbasics">
+                                    <a href="https://devx.windows.com/en-us/design/design-basics" role="menuitem" data-bi-name="Docs_Games_AppDesignBasics">
+                                        App design basics
+                                    </a>
+                                </li>
+                                <li id="docs_games_appdesignguidelines">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/hh465424.aspx" role="menuitem" data-bi-name="Docs_Games_AppDesignGuidelines">
+                                        App design guidelines
+                                    </a>
+                                </li>
+                                <li id="docs_games_designgallery">
+                                    <a href="https://windesigngallery.azurewebsites.net/" role="menuitem" data-bi-name="Docs_Games_Designgallery">
+                                        Design gallery
+                                    </a>
+                                </li>
+                                <li id="docs_games_all" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/games/design" role="menuitem" data-bi-name="Docs_Games_All">
+                                        All Design &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Develop</h3></li>
+                                <li id="docs_games_developinggames">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/hh452744.aspx" role="menuitem" data-bi-name="Docs_Games_DevelopingGames">
+                                        Developing games
+                                    </a>
+                                </li>
+                                <li id="docs_games_graphicsandgaming">
+                                    <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ee663279" role="menuitem" data-bi-name="Docs_Games_GraphicsAndGaming">
+                                        Graphics and gaming
+                                    </a>
+                                </li>
+                                <li id="docs_games_direct3d12graphics">
+                                    <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn903821" role="menuitem" data-bi-name="Docs_Games_Direct3D12Graphics">
+                                        Direct3D 12 graphics
+                                    </a>
+                                </li>
+                                <li id="docs_games_developwindowsapps">
+                                    <a href="https://devx.windows.com/en-us/develop" role="menuitem" data-bi-name="Docs_Games_DevelopWindowsApps">
+                                        Develop Windows apps
+                                    </a>
+                                </li>
+                                <li id="docs_games_windowsappreference">
+                                    <a href="https://msdn.microsoft.com/library/windows/apps/br211369" role="menuitem" data-bi-name="Docs_Games_WindowsAppReference">
+                                        Windows app reference
+                                    </a>
+                                </li>
+                                <li id="docs_games_alldevelop" data-mobile=1>
+                                    <a href="https://devx.windows.com/en-us/games/develop" role="menuitem" data-bi-name="Docs_Games_AllDevelop">
+                                        All Develop &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Publish</h3></li>
+                                <li id="docs_games_publishwindowsapps">
+                                    <a href="https://devx.windows.com/en-us/publish" role="menuitem" data-bi-name="Docs_Games_PublishWindowsApps">
+                                        Publish Windows apps
+                                    </a>
+                                </li>
+                                <li id="docs_games_dashboard">
+                                    <a href="https://devx.windows.com/en-us/publish/dashboard-selection" role="menuitem" data-bi-name="Docs_Games_Dashboard">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li id="docs_games_id@xbox">
+                                    <a href="http://www.xbox.com/Developers/id" role="menuitem" data-bi-name="Docs_Games_ID@Xbox">
+                                        ID@Xbox
+                                    </a>
+                                </li>
+                                <li id="docs_games_all" data-mobile=1>
+                                    <a href="https://dev.windows.com/en-us/games/publish" role="menuitem" data-bi-name="Docs_Games_All">
+                                        All Publish &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </dd>
+
+                    </dl>
+                    <dl class="shell-header-dropdown-tab shell-tab-mcol ">
+
+                        <dt id="docs_desktop" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Desktop applications
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="4">
+
+
+
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Get started</h3></li>
+                                <li id="docs_desktop_technology">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn614993.aspx" role="menuitem" data-bi-name="Docs_Desktop_Technology">
+                                        Choose your technology
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_whatnew">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/hh848361.aspx" role="menuitem" data-bi-name="Docs_Desktop_Whatnew">
+                                        What’s new
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_prog">
+                                    <a href="https://msdn.microsoft.com/windows/desktop/ee663266.aspx" role="menuitem" data-bi-name="Docs_Desktop_Prog">
+                                        Desktop programming
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_allgetstarted" data-mobile=1>
+                                    <a href="https://msdn.microsoft.com/windows/desktop/bg161546.aspx" role="menuitem" data-bi-name="Docs_Desktop_Allgetstarted">
+                                        All Get started &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Design</h3></li>
+                                <li id="docs_desktop_principles">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn742446.aspx" role="menuitem" data-bi-name="Docs_Desktop_principles">
+                                        Design principles
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_guidelines">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn688964.aspx" role="menuitem" data-bi-name="Docs_Desktop_Guidelines">
+                                        Guidelines
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_visual">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/dn688966.aspx" role="menuitem" data-bi-name="Docs_Desktop_Visual">
+                                        Visual index
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_alldesign" data-mobile=1>
+                                    <a href="https://msdn.microsoft.com/windows/desktop/aa511258.aspx" role="menuitem" data-bi-name="Docs_Desktop_Alldesign">
+                                        All Design &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Develop</h3></li>
+                                <li id="docs_desktop_desktoptech">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/bg126469.aspx" role="menuitem" data-bi-name="Docs_Desktop_Desktoptech">
+                                        Desktop technologies
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_serversystem">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/bg125390.aspx" role="menuitem" data-bi-name="Docs_Desktop_Serversystem">
+                                        Server and system
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_apireference">
+                                    <a href="https://msdn.microsoft.com/library/windows/desktop/hh920508.aspx" role="menuitem" data-bi-name="Docs_Desktop_Apireference">
+                                        API reference
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_certify">
+                                    <a href="https://msdn.microsoft.com/windows/desktop/jj134964.aspx" role="menuitem" data-bi-name="Docs_Desktop_Certify">
+                                        Certify
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_alldevelop" data-mobile=1>
+                                    <a href="https://msdn.microsoft.com/windows/desktop/aa904962.aspx" role="menuitem" data-bi-name="Docs_Desktop_Alldevelop">
+                                        All Develop &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Test and deploy</h3></li>
+                                <li id="docs_desktop_deploy">
+                                    <a href="http://msdn.microsoft.com/windows/desktop/dn640662.aspx" role="menuitem" data-bi-name="Docs_Desktop_Deploy">
+                                        Deploy
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_debug">
+                                    <a href="http://msdn.microsoft.com/windows/desktop/dn640617.aspx" role="menuitem" data-bi-name="Docs_Desktop_Debug">
+                                        Debug
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_instrument">
+                                    <a href="http://msdn.microsoft.com/windows/desktop/dn640663.aspx" role="menuitem" data-bi-name="Docs_Desktop_Instrument">
+                                        Instrument
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_tools">
+                                    <a href="http://msdn.microsoft.com/windows/desktop/dn640664.aspx" role="menuitem" data-bi-name="Docs_Desktop_Tools">
+                                        Tools
+                                    </a>
+                                </li>
+                                <li id="docs_desktop_alltest" data-mobile=1>
+                                    <a href="http://msdn.microsoft.com/windows/desktop/dn553326.aspx" role="menuitem" data-bi-name="Docs_Desktop_Alltest">
+                                        All Test &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </dd>
+
+                    </dl>
+                    <dl class="shell-header-dropdown-tab shell-tab-mcol ">
+
+                        <dt id="docs_iot" class="shell-header-dropdown-tab-label">
+                            <a href="javascript:void(0)" role="menuitem" data-bi-dnt="">
+                                Windows IoT
+                            </a>
+                        </dt>
+                        <dd class="shell-header-dropdown-tab-content" data-col="4">
+
+
+
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Get started</h3></li>
+                                <li id="docs_iot_platformoverview">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532975" role="menuitem" data-bi-name="Docs_IoT_Platformoverview">
+                                        Platform overview
+                                    </a>
+                                </li>
+                                <li id="docs_iot_register">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532947" role="menuitem" data-bi-name="Docs_IoT_Register">
+                                        Register
+                                    </a>
+                                </li>
+                                <li id="docs_iot_setup">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532974" role="menuitem" data-bi-name="Docs_IoT_Setup">
+                                        Set up your device
+                                    </a>
+                                </li>
+                                <li id="docs_iot_firstapp">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532945" role="menuitem" data-bi-name="Docs_IoT_FirstApp">
+                                        Write your first app
+                                    </a>
+                                </li>
+                                <li id="docs_iot_all" data-mobile=1>
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532957" role="menuitem" data-bi-name="Docs_IoT_All">
+                                        All Get started &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Develop</h3></li>
+                                <li id="docs_iot_atbuild">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532963" role="menuitem" data-bi-name="Docs_IoT_AtBuild">
+                                        Windows IoT at Build 2015
+                                    </a>
+                                </li>
+                                <li id="docs_iot_codesamples">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532976" role="menuitem" data-bi-name="Docs_IoT_CodeSamples">
+                                        Code samples
+                                    </a>
+                                </li>
+                                <li id="docs_iot_faq">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532965" role="menuitem" data-bi-name="Docs_IoT_Faq">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li id="docs_iot_all" data-mobile=1>
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532961" role="menuitem" data-bi-name="Docs_IoT_All">
+                                        All Develop &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>Learn more</h3></li>
+                                <li id="docs_iot_projectgallery">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532977" role="menuitem" data-bi-name="Docs_IoT_ProjectGallery">
+                                        IoT Project gallery
+                                    </a>
+                                </li>
+                                <li id="docs_iot_downloads">
+                                    <a href="http://go.microsoft.com/fwlink/p/?LinkID=532967" role="menuitem" data-bi-name="Docs_Iot_Downloads">
+                                        Downloads
+                                    </a>
+                                </li>
+                                <li id="docs_iot_community" data-mobile=1>
+                                    <a href="http://go.microsoft.com/fwlink/p/?LinkID=532968" role="menuitem" data-bi-name="Docs_Iot_Community">
+                                        Community
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="shell-header-dropdown-tab-list shell-l3-group">
+                                <li><h3>IoT Hardware</h3></li>
+                                <li id="docs_iot_getstartedguide">
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532966" role="menuitem" data-bi-name="Docs_IoT_GetStartedGuide">
+                                        IoT Getting started guide
+                                    </a>
+                                </li>
+                                <li id="docs_iot_hardware" data-mobile=1>
+                                    <a href="http://go.microsoft.com/fwlink/p/?linkid=532948" role="menuitem" data-bi-name="Docs_IoT_Hardware">
+                                        IoT Hardware &gt;
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </dd>
+
+                    </dl>
+
+                </div>
+
+            </li>
+            <li id="downloads" class="shell-header-dropdown-label ">
+                <a class="top-level-link-text ctl_headerNavLink" href="https://devx.windows.com/en-us/downloads" role="menuitem" data-bi-name="Downloads" data-bi-slot="4">
+
+                    Downloads
+                </a>
+            </li>
+            <li id="samples" class="shell-header-dropdown-label ">
+                <a class="top-level-link-text ctl_headerNavLink" href="https://devx.windows.com/en-us/samples" role="menuitem" data-bi-name="Samples" data-bi-slot="5">
+
+                    Samples
+                </a>
+            </li>
+            <li id="community" class="shell-header-dropdown-label ">
+                <a class="top-level-link-text ctl_headerNavLink" href="https://devx.windows.com/en-us/community" role="menuitem" data-bi-name="Community" data-bi-slot="6">
+
+                    Community
+                </a>
+            </li>
+            <li id="programs" class="shell-header-dropdown-label ">
+                <a class="top-level-link-text ctl_headerNavLink" href="https://devx.windows.com/en-us/programs" role="menuitem" data-bi-name="Programs" data-bi-slot="7">
+
+                    Programs
+                </a>
+            </li>
+            <li id="dashboard" class="shell-header-dropdown-label rightAlignedMenu">
+                <a class="top-level-link-text ctl_headerNavLink" href="https://devx.windows.com/en-us/publish/dashboard-selection" role="menuitem" data-bi-name="Dashboard" data-bi-slot="8">
+
+                    Dashboard
+                </a>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+
+    var meControlOptions = {
+        containerId: 'meControl',
+        mobileBreakpoint: 0,
+        market: 'en-US',
+
+        rpData:
+        {
+            msaInfo:
+            {
+
+                signInText: 'Sign In',
+                signOutText: 'Sign Out',
+                signInUrl: '/en-us/store/signin',
+                signOutUrl: '/en-us/store/signout',
+                accountSettingsUrl: 'https://account.live.com/',
+                switchUrl: '',
+                meUrl: 'https://login.live.com/me.srf?wa=wsignin1.0&amp;wreply=https://account.live.com/',
+                isSupported: true
+
+            },
+            aadInfo:
+            {
+            },
+            preferredIdp: 'msa'
+        },
+    };
+
+    var shell = window.msCommonShell;
+    if (shell) {
+        shell.meControlOptions = meControlOptions;
+        shell.internalInitialize();
+    }
+
+
+</script>
+    </div>
+
+    <div class="default-main">
+        <div class="row">
+            <div class="default-max-width">
+                <div>
+                    <div class="l2-nav hidden-xs">
+    <ul class="nav nav-justified">
+        <li role="presentation"><a href="">IoT home</a></li>
+        <li role="presentation"><a href="/GetStarted.htm">Get started</a></li>
+        <li role="presentation"><a href="">Projects</a></li>
+        <li role="presentation"><a href="/win10/StartCoding.htm">Docs &amp; samples</a></li>
+        <li role="presentation"><a href="/Faqs.htm">FAQs</a></li>
+        <li role="presentation"><a href="/Downloads.htm">Downloads</a></li>
+        <li role="presentation"><a href="">Hardware</a></li>
+        <li role="presentation"><a href="/Community.htm">Community</a></li>
+        <li role="presentation"><a href="/Build2015.htm">Build 2015</a></li>
+    </ul>
+</div>
+
+<!-- Nav for mobile view -->
+<button class="btn btn-default iot-nav visible-xs" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">IoT Nav<br /><div class="glyphicon glyphicon-menu-down"></div></button>
+<div class="collapse" id="collapseExample">
+    <div class="well">
+        <ul class="nav">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/GetStarted.htm">Get started</a></li>
+            <li role="presentation"><a href="">Projects</a></li>
+            <li role="presentation"><a href="/win10/StartCoding.htm">Docs &amp; samples</a></li>
+            <li role="presentation"><a href="/Faqs.htm">FAQs</a></li>
+            <li role="presentation"><a href="/Downloads.htm">Downloads</a></li>
+            <li role="presentation"><a href="">Hardware</a></li>
+            <li role="presentation"><a href="/Community.htm">Community</a></li>
+            <li role="presentation"><a href="/Build2015.htm">//Build 2015</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end mobile nav -->
+
+                </div>
+                <div class="content-container col-md-12">
+                    <div class="container">
+  <h2 id="telephone-system-with-translation-service">Telephone system with Translation service</h2>
+  <p>Please read before continue:
+This demo is built on MBM. The image we use has some private fixes in it. So you probably will not be able to download the MBM image and build this demo yet.
+But all the private fixes should be coming in soon on latest MBM image. Just watch out for that and try it out later.</p>
+
+  <p>Also same situation holds for RPi2. In next few release of RPi2, you will be able to build this demo on it. Keep an eye on our announcements.</p>
+
+  <ol>
+    <li>
+      <p>Technologies Involved</p>
+
+      <ul>
+        <li>Speech Recognition</li>
+        <li>Message Socket Transmission between devices</li>
+        <li>Bing Translator API Call</li>
+        <li>Speech Synthesis</li>
+        <li>GPIO Events/Interrupt</li>
+      </ul>
+    </li>
+    <li>
+      <p>Project Overview</p>
+
+      <p>There are two MBM devices, and each device is attached to a toggle switch through GPIO pins. The toggle switch is used to select language.
+ We can speak into device 1, the input message will be sent to device 2, on device 2 the message is sent to Bing Translator for translation.
+ Then the translated message will be returned back and played out on device 2.
+ So It is basically like telephone system. You speak on this side, the people will hear you on the other side in a different language, depending on the switch selection.</p>
+
+      <p>The switch controls both Input and Output Language. For example, if the switch is on Chinese, you can speak Chinese into this device, and also the message you received from the other device
+ will be played out in Chinese as well, vise versa.</p>
+    </li>
+  </ol>
+
+  <h2 id="parts-needed">Parts needed</h2>
+  <ul>
+    <li><a href="http://www.minnowboard.org/meet-minnowboard-max/">Two MBM Devices</a></li>
+    <li><a href="http://www.digikey.com/product-detail/en/ATE1D-2M3-10-Z/563-1157-ND/1792018">Two toggle switch</a></li>
+    <li><a href="https://www.microsoft.com/hardware/en-us/b/lifechat-lx-4000-for-business/7YF-00001">Two headSet</a></li>
+    <li>Two HDMI Monitor(optional)</li>
+    <li>1 breadboard and a couple of wires</li>
+  </ul>
+
+  <h2 id="parts-connection">Parts Connection</h2>
+  <ol>
+    <li>Toggle Switch to MBM
+      <ul>
+        <li>Toggle Switch Middle Pin to GND on MBM</li>
+        <li>Toggle Switch Lower Pin to Pin 2 on MBM</li>
+        <li>Toggle Switch Upper Pin to Pin 9 on MBM</li>
+      </ul>
+
+      <p>Same as the other toggle switch and MBM board</p>
+    </li>
+    <li>Other Connection
+      <ul>
+        <li>Plug each headset into each device</li>
+        <li>Connect HDMI monitor into each Device
+ (Note: The HDMI monitor is optional; and It will be used to display the debugging message, like it show the speech content you speak into device, and also the message your device received
+ from other device, and the device conneciton status etc on; The project will run fine without the monitor)</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2 id="go-through-the-code">Go through the code</h2>
+  <p>For the complete code, please look for <a href="https://github.com/MagicBunny/SRTranslator/tree/master/SampleCode/ShenzhenMBM">here</a>;
+Below we go through all the main pieces of the project;</p>
+
+  <p>a. Main Enterance</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="nf">MainPage</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">this</span><span class="p">.</span><span class="n">InitializeComponent</span><span class="p">();</span>
+	<span class="n">listener</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamSocketListener</span><span class="p">();</span>
+	<span class="n">startListener</span><span class="p">();</span>
+	<span class="n">InitGpio</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
+
+  <p>b. Initialze GPIO</p>
+
+  <p>Note:  switchPin1.ValueChanged is switch event/interrupt. It gets called everytime you switch the switch. Therefore, a new process will be invoked very time you change the switch status.</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// GPIO Section</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">// MBM Pin Parameter</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">switchPinNum1</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">switchPinNum2</span> <span class="p">=</span> <span class="m">9</span><span class="p">;</span>
+		
+        <span class="k">public</span> <span class="k">async</span> <span class="k">void</span> <span class="nf">InitGpio</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">gpioController</span> <span class="p">=</span> <span class="n">GpioController</span><span class="p">.</span><span class="n">GetDefault</span><span class="p">();</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">switchPin1</span> <span class="p">=</span> <span class="n">gpioController</span><span class="p">.</span><span class="n">OpenPin</span><span class="p">(</span><span class="n">switchPinNum1</span><span class="p">);</span>
+                <span class="n">switchPin2</span> <span class="p">=</span> <span class="n">gpioController</span><span class="p">.</span><span class="n">OpenPin</span><span class="p">(</span><span class="n">switchPinNum2</span><span class="p">);</span>
+
+                <span class="n">switchPin1</span><span class="p">.</span><span class="n">SetDriveMode</span><span class="p">(</span><span class="n">GpioPinDriveMode</span><span class="p">.</span><span class="n">Input</span><span class="p">);</span>
+                <span class="n">switchPin2</span><span class="p">.</span><span class="n">SetDriveMode</span><span class="p">(</span><span class="n">GpioPinDriveMode</span><span class="p">.</span><span class="n">Input</span><span class="p">);</span>
+
+                <span class="k">await</span> <span class="nf">startSRProcess</span><span class="p">();</span>
+
+                <span class="n">switchPin1</span><span class="p">.</span><span class="n">DebounceTimeout</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TimeSpan</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+
+                <span class="c1">// value change</span>
+                <span class="n">switchPin1</span><span class="p">.</span><span class="n">ValueChanged</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">isListening</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="k">try</span>
+                        <span class="p">{</span>
+                        <span class="k">await</span> <span class="n">speechRecognizer</span><span class="p">.</span><span class="n">ContinuousRecognitionSession</span><span class="p">.</span><span class="n">StopAsync</span><span class="p">();</span>
+                        <span class="p">}</span>
+                        <span class="k">catch</span>
+                        <span class="p">{</span>
+
+                        <span class="p">}</span>
+
+                    <span class="p">}</span>
+                   <span class="c1">// await selectLang();</span>
+                    <span class="k">await</span> <span class="nf">startSRProcess</span><span class="p">();</span>
+                    
+                <span class="p">};</span>
+
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+            <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="p">}</span></code></pre></div>
+
+  <p>c. Open Listener on this device: When the application starts, it opens the port on it to be ready to receive the message sent from other device.
+OnConnection will be called whenever there are messages sent otver. The translation service will be called here and the message will be converted to SpeechSynthesisStream to be played out.</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">async</span> <span class="k">void</span> <span class="nf">startListener</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">ConstantParam</span><span class="p">.</span><span class="n">SelfPort</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Please provide a service port.&quot;</span><span class="p">;</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">listener</span><span class="p">.</span><span class="n">ConnectionReceived</span> <span class="p">+=</span> <span class="n">OnConnection</span><span class="p">;</span>
+
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="k">await</span> <span class="n">listener</span><span class="p">.</span><span class="n">BindServiceNameAsync</span><span class="p">(</span><span class="n">ConstantParam</span><span class="p">.</span><span class="n">SelfPort</span><span class="p">);</span>
+                <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Listening on port: &quot;</span> <span class="p">+</span> <span class="n">ConstantParam</span><span class="p">.</span><span class="n">SelfPort</span><span class="p">;</span>
+                <span class="n">ReceivedText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">SocketError</span><span class="p">.</span><span class="n">GetStatus</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">HResult</span><span class="p">)</span> <span class="p">==</span> <span class="n">SocketErrorStatus</span><span class="p">.</span><span class="n">Unknown</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">throw</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Start listening failed with error: &quot;</span> <span class="p">+</span> <span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">private</span> <span class="k">async</span> <span class="k">void</span> <span class="nf">OnConnection</span><span class="p">(</span><span class="n">StreamSocketListener</span> <span class="n">sender</span><span class="p">,</span> <span class="n">StreamSocketListenerConnectionReceivedEventArgs</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+
+            <span class="n">DataReader</span> <span class="n">reader</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataReader</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">Socket</span><span class="p">.</span><span class="n">InputStream</span><span class="p">);</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="c1">// Read first 4 bytes (length of the subsequent string).</span>
+                    <span class="kt">uint</span> <span class="n">sizeFieldCount</span> <span class="p">=</span> <span class="k">await</span> <span class="n">reader</span><span class="p">.</span><span class="n">LoadAsync</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint</span><span class="p">));</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">sizeFieldCount</span> <span class="p">!=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">uint</span><span class="p">))</span>
+                    <span class="p">{</span>
+                        <span class="c1">// The underlying socket was closed before we were able to read the whole data.</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+
+                    <span class="c1">// Read the string.</span>
+                    <span class="kt">uint</span> <span class="n">stringLength</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadUInt32</span><span class="p">();</span>
+                    <span class="kt">uint</span> <span class="n">actualStringLength</span> <span class="p">=</span> <span class="k">await</span> <span class="n">reader</span><span class="p">.</span><span class="n">LoadAsync</span><span class="p">(</span><span class="n">stringLength</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">stringLength</span> <span class="p">!=</span> <span class="n">actualStringLength</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="c1">// The underlying socket was closed before we were able to read the whole data.</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+
+                    <span class="c1">// Display the string.</span>
+                    <span class="kt">string</span> <span class="n">text</span> <span class="p">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadString</span><span class="p">(</span><span class="n">actualStringLength</span><span class="p">);</span>
+
+                    <span class="c1">// Get the language and the content received</span>
+                    <span class="kt">char</span> <span class="n">delimiter</span> <span class="p">=</span> <span class="sc">&#39;:&#39;</span><span class="p">;</span>
+                    <span class="kt">string</span><span class="p">[]</span> <span class="n">res</span><span class="p">;</span>
+                    <span class="n">res</span> <span class="p">=</span> <span class="n">text</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="n">delimiter</span><span class="p">);</span>
+                    <span class="kt">string</span> <span class="n">InLang</span> <span class="p">=</span> <span class="s">&quot;en&quot;</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;zh&quot;</span><span class="p">))</span>
+                    <span class="p">{</span>
+                        <span class="n">InLang</span> <span class="p">=</span> <span class="s">&quot;zh-CHS&quot;</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="kt">string</span> <span class="n">outLang</span> <span class="p">=</span> <span class="s">&quot;en&quot;</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">selectedLang</span><span class="p">.</span><span class="n">LanguageTag</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;zh&quot;</span><span class="p">))</span>
+                    <span class="p">{</span>
+                        <span class="n">outLang</span> <span class="p">=</span> <span class="s">&quot;zh-CHS&quot;</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="kt">string</span> <span class="n">content</span> <span class="p">=</span> <span class="n">res</span><span class="p">[</span><span class="m">1</span><span class="p">];</span>
+
+                    <span class="n">Translator</span> <span class="n">Trans</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Translator</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">InLang</span><span class="p">,</span> <span class="n">outLang</span><span class="p">);</span>
+                    <span class="kt">string</span> <span class="n">translatedS</span> <span class="p">=</span> <span class="n">Trans</span><span class="p">.</span><span class="n">GetTranslatedString</span><span class="p">();</span>
+
+                    <span class="n">SpeechSynthesisStream</span> <span class="n">stream</span> <span class="p">=</span> <span class="k">await</span> <span class="n">synthesizer</span><span class="p">.</span><span class="n">SynthesizeTextToStreamAsync</span><span class="p">(</span><span class="n">translatedS</span><span class="p">);</span>
+                    <span class="kt">var</span> <span class="n">ignored</span> <span class="p">=</span> <span class="n">Dispatcher</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(</span><span class="n">Windows</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">CoreDispatcherPriority</span><span class="p">.</span><span class="n">Normal</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+                    <span class="p">{</span>
+                        <span class="n">media</span><span class="p">.</span><span class="n">SetSource</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">stream</span><span class="p">.</span><span class="n">ContentType</span><span class="p">);</span>
+                        <span class="n">media</span><span class="p">.</span><span class="n">Play</span><span class="p">();</span>
+                        <span class="n">ReceivedText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">text</span><span class="p">;</span>
+                    <span class="p">});</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="c1">// If this is an unknown status it means that the error is fatal and retry will likely fail.</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">SocketError</span><span class="p">.</span><span class="n">GetStatus</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">HResult</span><span class="p">)</span> <span class="p">==</span> <span class="n">SocketErrorStatus</span><span class="p">.</span><span class="n">Unknown</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">throw</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="kt">var</span> <span class="n">ignored</span> <span class="p">=</span> <span class="n">Dispatcher</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(</span><span class="n">Windows</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">CoreDispatcherPriority</span><span class="p">.</span><span class="n">Normal</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+                <span class="p">{</span>
+                    <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Read stream failed with error: &quot;</span> <span class="p">+</span> <span class="n">exception</span><span class="p">.</span><span class="n">Message</span><span class="p">;</span>
+                    <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">+=</span> <span class="s">&quot;Reconnecting Later!&quot;</span><span class="p">;</span>              
+                    <span class="n">connected</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+                    <span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="s">&quot;clientSocket&quot;</span><span class="p">);</span>
+                    <span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="s">&quot;clientDataWriter&quot;</span><span class="p">);</span>
+                <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">}</span></code></pre></div>
+
+  <p>d. Send Data to another device;
+First It makes connection to the other device, and once the connection is established, and then it sends the speech recognition message over</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">async</span> <span class="k">void</span> <span class="nf">SendDataToHost</span><span class="p">(</span><span class="kt">string</span> <span class="n">dataToBeSent</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//CoreApplication.Properties.Remove(&quot;clientSocket&quot;);</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">connected</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(!</span><span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s">&quot;clientSocket&quot;</span><span class="p">))</span>
+                <span class="p">{</span>
+                    <span class="n">HostName</span> <span class="n">hostName</span><span class="p">;</span>
+                    <span class="k">try</span>
+                    <span class="p">{</span>
+                        <span class="n">hostName</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HostName</span><span class="p">(</span><span class="n">ConstantParam</span><span class="p">.</span><span class="n">ServerHostname</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">catch</span> <span class="p">(</span><span class="n">ArgumentException</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+
+                    <span class="n">StreamSocket</span> <span class="n">locsocket</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StreamSocket</span><span class="p">();</span>
+                    <span class="c1">// save the soket so subsequence can use it</span>
+                    <span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;clientSocket&quot;</span><span class="p">,</span> <span class="n">locsocket</span><span class="p">);</span>
+                    <span class="k">try</span>
+                    <span class="p">{</span>
+                        <span class="k">await</span> <span class="n">locsocket</span><span class="p">.</span><span class="n">ConnectAsync</span><span class="p">(</span><span class="n">hostName</span><span class="p">,</span> <span class="n">ConstantParam</span><span class="p">.</span><span class="n">ClientPort</span><span class="p">);</span>
+                        <span class="k">await</span> <span class="n">Dispatcher</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(</span><span class="n">Windows</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">CoreDispatcherPriority</span><span class="p">.</span><span class="n">Normal</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+                        <span class="p">{</span>
+                            <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">+=</span> <span class="s">&quot;Connected!&quot;</span><span class="p">;</span>
+                        <span class="p">});</span>
+                        <span class="n">connected</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="c1">// If this is an unknown status it means that the error is fatal and retry will likely fail.</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">SocketError</span><span class="p">.</span><span class="n">GetStatus</span><span class="p">(</span><span class="n">exception</span><span class="p">.</span><span class="n">HResult</span><span class="p">)</span> <span class="p">==</span> <span class="n">SocketErrorStatus</span><span class="p">.</span><span class="n">Unknown</span><span class="p">)</span>
+                        <span class="p">{</span>
+                            <span class="k">await</span> <span class="n">Dispatcher</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(</span><span class="n">Windows</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Core</span><span class="p">.</span><span class="n">CoreDispatcherPriority</span><span class="p">.</span><span class="n">Normal</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+                            <span class="p">{</span>
+                                <span class="n">StatusText</span><span class="p">.</span><span class="n">Text</span> <span class="p">+=</span> <span class="s">&quot;Connect to host failed&quot;</span><span class="p">;</span>
+                            <span class="p">});</span>
+                            <span class="c1">//throw;</span>
+                            <span class="k">return</span><span class="p">;</span>
+                        <span class="p">}</span>
+
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="c1">//StatusText.Text = &quot;Must be connected to send&quot;;</span>
+                <span class="c1">//  return;</span>
+            <span class="p">}</span>
+            <span class="c1">// If the connection was not setup still, we return instead of continuing to send data which will break the code.</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">connected</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="kt">object</span> <span class="n">outValue</span><span class="p">;</span>
+            <span class="n">StreamSocket</span> <span class="n">socket</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="s">&quot;clientSocket&quot;</span><span class="p">,</span> <span class="k">out</span> <span class="n">outValue</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">socket</span> <span class="p">=</span> <span class="p">(</span><span class="n">StreamSocket</span><span class="p">)</span><span class="n">outValue</span><span class="p">;</span>
+            <span class="c1">// Create a DataWriter if we did not create one yet. Otherwise use one that is already cached.</span>
+            <span class="n">DataWriter</span> <span class="n">writer</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="s">&quot;clientDataWriter&quot;</span><span class="p">,</span> <span class="k">out</span> <span class="n">outValue</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">writer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataWriter</span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="n">OutputStream</span><span class="p">);</span>
+                <span class="n">CoreApplication</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;clientDataWriter&quot;</span><span class="p">,</span> <span class="n">writer</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">writer</span> <span class="p">=</span> <span class="p">(</span><span class="n">DataWriter</span><span class="p">)</span><span class="n">outValue</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// Write first the length of the string as UINT32 value followed up by the string. </span>
+            <span class="c1">// Writing data to the writer will just store data in memory.</span>
+            <span class="kt">string</span> <span class="n">stringToSend</span> <span class="p">=</span> <span class="n">dataToBeSent</span><span class="p">;</span>
+            <span class="n">writer</span><span class="p">.</span><span class="n">WriteUInt32</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="n">MeasureString</span><span class="p">(</span><span class="n">stringToSend</span><span class="p">));</span>
+            <span class="n">writer</span><span class="p">.</span><span class="n">WriteString</span><span class="p">(</span><span class="n">stringToSend</span><span class="p">);</span>
+
+            <span class="c1">// Write the locally buffered data to the network.</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="k">await</span> <span class="n">writer</span><span class="p">.</span><span class="n">StoreAsync</span><span class="p">();</span>
+                <span class="c1">//  SendOutput.Text = &quot;\&quot;&quot; + stringToSend + &quot;\&quot; sent successfully.&quot;;</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">exception</span><span class="p">)</span>
+            <span class="p">{</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span></code></pre></div>
+
+  <p>e. Bing Translator: For how to use the MS Translator, Click <a href="https://www.microsoft.com/translator/getstarted.aspx">here</a>;</p>
+
+  <p>MS translator service is hosted in Azure. You need to get a Azure account then register the translation service; Then you will get the clientID and ClientSecret;
+Use that ClientID and ClientSecret to use the service.
+I have made the namespace Translator as below;</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">Translator</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="kt">string</span> <span class="n">originalString</span><span class="p">;</span>
+        <span class="k">private</span> <span class="kt">string</span> <span class="n">translated</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="nf">Translator</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">string</span> <span class="k">from</span><span class="p">,</span> <span class="kt">string</span> <span class="n">to</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">originalString</span> <span class="p">=</span> <span class="n">s</span><span class="p">;</span>
+            <span class="n">AdmAuthentication</span> <span class="n">admAuth</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AdmAuthentication</span><span class="p">(</span><span class="n">ConstantParam</span><span class="p">.</span><span class="n">clientid</span><span class="p">,</span> <span class="n">ConstantParam</span><span class="p">.</span><span class="n">clientsecret</span><span class="p">);</span>
+            <span class="n">Task</span><span class="p">&lt;</span><span class="n">AdmAccessToken</span><span class="p">&gt;</span> <span class="n">admToken</span> <span class="p">=</span> <span class="n">admAuth</span><span class="p">.</span><span class="n">GetAccessToken</span><span class="p">();</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">translated</span> <span class="p">=</span> <span class="n">TranslateMethod</span><span class="p">(</span><span class="s">&quot;Bearer&quot;</span> <span class="p">+</span> <span class="s">&quot; &quot;</span> <span class="p">+</span> <span class="n">admToken</span><span class="p">.</span><span class="n">Result</span><span class="p">.</span><span class="n">access_token</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="n">originalString</span><span class="p">,</span> <span class="k">from</span><span class="p">,</span> <span class="n">to</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetTranslatedString</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">translated</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">TranslateMethod</span><span class="p">(</span><span class="kt">string</span> <span class="n">authToken</span><span class="p">,</span> <span class="kt">string</span> <span class="n">originalS</span><span class="p">,</span> <span class="kt">string</span> <span class="k">from</span><span class="p">,</span> <span class="kt">string</span> <span class="n">to</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">text</span> <span class="p">=</span> <span class="n">originalS</span><span class="p">;</span> 
+            <span class="c1">//string from = &quot;en&quot;;</span>
+            <span class="c1">//string to = &quot;zh-CHS&quot;;</span>
+            <span class="c1">//string from = Constants.from;// &quot;zh-CHS&quot;;</span>
+            <span class="c1">//string to = Constants.to; // &quot;en&quot;;</span>
+
+            <span class="kt">string</span> <span class="n">transuri</span> <span class="p">=</span> <span class="n">ConstantParam</span><span class="p">.</span><span class="n">ApiUri</span> <span class="p">+</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebUtility</span><span class="p">.</span><span class="n">UrlEncode</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="p">+</span> <span class="s">&quot;&amp;from=&quot;</span> <span class="p">+</span> <span class="k">from</span> <span class="p">+</span> <span class="s">&quot;&amp;to=&quot;</span> <span class="p">+</span> <span class="n">to</span><span class="p">;</span>
+
+            <span class="n">HttpWebRequest</span> <span class="n">httpWebRequest</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpWebRequest</span><span class="p">)</span><span class="n">WebRequest</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">transuri</span><span class="p">);</span>
+            <span class="c1">//  httpWebRequest.ContentType = &quot;application/x-www-form-urlencoded&quot;;</span>
+            <span class="n">httpWebRequest</span><span class="p">.</span><span class="n">Headers</span><span class="p">[</span><span class="s">&quot;Authorization&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">authToken</span><span class="p">;</span>
+            <span class="c1">//httpWebRequest.Method = &quot;GET&quot;;</span>
+            <span class="kt">string</span> <span class="n">trans</span><span class="p">;</span>
+
+            <span class="n">Task</span><span class="p">&lt;</span><span class="n">WebResponse</span><span class="p">&gt;</span> <span class="n">response</span> <span class="p">=</span> <span class="n">httpWebRequest</span><span class="p">.</span><span class="n">GetResponseAsync</span><span class="p">();</span>
+
+            <span class="k">using</span> <span class="p">(</span><span class="n">Stream</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Result</span><span class="p">.</span><span class="n">GetResponseStream</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">DataContractSerializer</span> <span class="n">dcs</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">DataContractSerializer</span><span class="p">(</span><span class="n">Type</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">&quot;System.String&quot;</span><span class="p">));</span>
+                <span class="c1">//DataContractJsonSerializer dcs = new DataContractJsonSerializer(Type.GetType(&quot;System.String&quot;));</span>
+                <span class="n">trans</span> <span class="p">=</span> <span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">dcs</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+                <span class="k">return</span> <span class="n">trans</span><span class="p">;</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></div>
+
+  <p>In order to use the translator, Just need to do below</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">Translator</span> <span class="n">Trans</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Translator</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">InLang</span><span class="p">,</span> <span class="n">outLang</span><span class="p">);</span>
+	<span class="kt">string</span> <span class="n">translatedS</span> <span class="p">=</span> <span class="n">Trans</span><span class="p">.</span><span class="n">GetTranslatedString</span><span class="p">();</span></code></pre></div>
+
+  <p>f. Constant Parameter Configuration
+Note: For the two devices, this configuration file will need to be changed a little. As each device is using the other device’s name as the serverHostName to send data to.
+Pay attention to the parameters SelfPort/ClientPort/ServerHostname and Commented out lines to make sure you understand before deploying to device</p>
+
+  <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">ConstantParam</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">DatamarketAccessUri</span> <span class="p">=</span> <span class="s">&quot;https://datamarket.accesscontrol.windows.net/v2/OAuth2-13&quot;</span><span class="p">;</span>
+        <span class="k">public</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">RefreshTokenDuration</span> <span class="p">=</span> <span class="m">9</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">clientid</span> <span class="p">=</span> <span class="s">&quot;iotmaker&quot;</span><span class="p">;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">clientsecret</span> <span class="p">=</span> <span class="s">&quot;nA/M181Yi4PF08c0n8IjEz1b9SWSkzj0+wukNQBwcf4=&quot;</span><span class="p">;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">ApiUri</span> <span class="p">=</span> <span class="s">&quot;http://api.microsofttranslator.com/v2/Http.svc/Translate?text=&quot;</span><span class="p">;</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">///  Uncomment if you are deploying to Device 1</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// </span>
+
+        <span class="c1">// Stream Socket parameters</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SelfPort</span> <span class="p">=</span> <span class="s">&quot;8083&quot;</span><span class="p">;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">ClientPort</span> <span class="p">=</span> <span class="s">&quot;8082&quot;</span><span class="p">;</span>
+        <span class="c1">// public static string ServerHostname = &quot;shenzhen_mbm2&quot;;</span>
+        <span class="c1">//public static string ServerHostname = &quot;Shenzhenrpi1&quot;;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">ServerHostname</span> <span class="p">=</span> <span class="s">&quot;mbmdemo4&quot;</span><span class="p">;</span>
+
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">///  Uncomment if you are deploying to Device 2</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// </span>
+        <span class="c1">//public static string SelfPort = &quot;8082&quot;;</span>
+        <span class="c1">//public static string ClientPort = &quot;8083&quot;;</span>
+        <span class="c1">////public static string ServerHostname = &quot;shenzhen_mbm1&quot;;</span>
+        <span class="c1">////public static string ServerHostname = &quot;Shenzhen_Rpi2&quot;;</span>
+        <span class="c1">//public static string ServerHostname = &quot;mbmdemo3&quot;;</span>
+    <span class="p">}</span></code></pre></div>
+
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chrome-header-wrapper">
+        <div class="container iot-site-footer">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a href="translator.md">
+                <img src="/images/Octocat.png" />Edit this page on GitHub
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+    </div>
+    ﻿<!--[if lte IE 8]>
+ <script src="https://assets.onestore.ms/cdnfiles/onestorerolling-1504-27002/shell/common/js/shell_ie8.js"></script>
+ <![endif]-->
+
+<script src="https://controls.account.microsoft.com/me?partner=dev-center-win-apps"></script>
+<script src="https://assets.onestore.ms/cdnfiles/onestorerolling-1504-27002/shell/generated/shellservice.v1.min.js"></script>
+<script src="https://assets.onestore.ms/cdnfiles/onestorerolling-1504-27002/store/blender/js/blender.js"></script>
+
+<div class="shell-rwd shell-footer" data-bi-area="Footer" data-bi-view="3xLinks">
+    <div class="shell-footer-wrapper">
+        <div class="shell-footer-lang">
+            <h4>
+                <a id="locale-picker-link" href="https://devx.windows.com/locale" data-bi-name="LocalePicker">
+                    <i class="shell-icon-globe"></i>English (United States)&lrm;
+                </a>
+            </h4>
+        </div>
+        <div class="shell-footer-copyright">
+            <ul>
+                <li>
+                    <a id="privacyandcookies" href="//go.microsoft.com/fwlink/p/?LinkId=248681" class="ctl_footerNavLink" data-bi-name="PrivacyAndCookies" data-bi-slot="1">
+                        Privacy and cookies
+                    </a>
+                </li>
+                <li>
+                    <a id="termsofuse" href="//go.microsoft.com/fwlink/p/?linkid=248155" class="ctl_footerNavLink" data-bi-name="TermsOfUse" data-bi-slot="2">
+                        Terms of use
+                    </a>
+                </li>
+                <li>
+                    <a id="trademarks" href="//go.microsoft.com/fwlink/p/?linkid=248154" class="ctl_footerNavLink" data-bi-name="Trademarks" data-bi-slot="3">
+                        Trademarks
+                    </a>
+                </li>
+
+                <li class="ctl_footerCopyright">
+                    &copy; 2015 Microsoft
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
