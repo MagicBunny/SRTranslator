@@ -13,11 +13,11 @@ namespace Shenzhen_DeviceOne
 
 
         //Token Property
-        //public static string clientid = "magicbunny888";
-        //public static string clientsecret = "FVw2RUvCvP//CaBomIQliFxqWIVM8B0angjeLOZvvDE=";
+        public static string clientid = "magicbunny888";
+        public static string clientsecret = "FVw2RUvCvP//CaBomIQliFxqWIVM8B0angjeLOZvvDE=";
 
-        public static string clientid = "iotmaker";
-        public static string clientsecret = "nA/M181Yi4PF08c0n8IjEz1b9SWSkzj0+wukNQBwcf4=";
+       // public static string clientid = "iotmaker";
+       // public static string clientsecret = "nA/M181Yi4PF08c0n8IjEz1b9SWSkzj0+wukNQBwcf4=";
 
         ////// Speak-Into Language
         //public static Windows.Globalization.Language lang = new Windows.Globalization.Language("zh-CN");
